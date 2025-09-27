@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="asset/videobelajar1.svg" alt="Video Belajar" />
+    </header>
+
+    <div class="login-container">
+      <div class="login-card">
+        <h1>Masuk ke akun</h1>
+        <p>Yuk, lanjutin belajarmu di videoBelajar</p>
+        <form>
+          <div class="form-group">
+            <label for="email">E-mail <b>*</b></label>
+            <input id="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Kata Sandi <b>*</b></label>
+            <input id="password" type="password" required />
+            <div class="forgot">
+              <a href="#">Lupa Password?</a>
+            </div>
+            <button type="button">
+              <img src="asset/mdi_eye-off.svg" alt="" />
+            </button>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Masuk</button>
+          <button type="button" class="btn btn-outline">Daftar</button>
+
+          <div class="atau">
+            <p><span>atau</span></p>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-outline"
+            style="background-color: white"
+          >
+            <img src="asset/logos_google-icon.svg" alt="" />
+            Masuk dengan Google
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
