@@ -22,6 +22,10 @@ header h1 {
   font-size: 1.2rem;
 }
 
+.hamburger {
+  position: absolute;
+}
+
 /* Container login */
 .login-container {
   flex: 1;
@@ -218,7 +222,7 @@ header .kategori-profil a {
   padding: 5rem;
 }
 
-.home .banner{
+.home .banner {
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -235,7 +239,7 @@ header .kategori-profil a {
   filter: brightness(0.2) saturate(1.02);
 }
 
-.centered{
+.centered {
   position: absolute;
   inset: 0;
   display: flex;
@@ -271,11 +275,11 @@ header .kategori-profil a {
 
 /* list-video */
 
-.list-video{
+.list-video {
   padding: 0 8rem;
 }
 
-.list-video .part1{
+.list-video .part1 {
   margin: 0;
   padding-bottom: 3rem;
 }
@@ -286,9 +290,8 @@ header .kategori-profil a {
   padding-bottom: 2rem;
 }
 
-.list-video p {
-  color: #333;
-  filter: brightness(30%);
+.list-video .part1 p {
+  color: #777;
 }
 
 .list-video .tabs input {
@@ -314,7 +317,7 @@ header .kategori-profil a {
   border-radius: 0.5rem;
 }
 
-.list-content{
+.list-content {
   display: grid;
   grid-template-columns: auto auto auto;
   row-gap: 1rem;
@@ -370,13 +373,13 @@ header .kategori-profil a {
   letter-spacing: 2px;
 }
 
-.rating-container .rating-score{
+.rating-container .rating-score {
   font-size: 0.95rem;
   color: #777;
   margin-left: 4px;
 }
 
-.rating-price{
+.rating-price {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -384,13 +387,13 @@ header .kategori-profil a {
   justify-content: space-between;
 }
 
-.rating-price .price{
+.rating-price .price {
   color: #00b14f;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.email-submit{
+.email-submit {
   display: flex;
   justify-content: space-between;
   width: 525px;
@@ -400,85 +403,97 @@ header .kategori-profil a {
   /* align-items: center; */
 }
 
-.email-submit input{
+.email-submit input {
   width: 100%;
   border: none;
   border-radius: 1rem;
   margin: 1rem;
 }
 
-.email-submit button{
+.email-submit button {
   width: 13rem;
   color: white;
-  background-color: #FFBD3A;
+  background-color: #ffbd3a;
   border: none;
   border-radius: 1rem;
   margin: 0.5rem;
   font-size: 1rem;
 }
 
-.centered .text-centered{
+.centered .text-centered {
   padding: 0 21rem;
 }
 
-footer{
+footer {
   padding: 1rem 8rem;
   background-color: white;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.informasi{
+.informasi {
   display: flex;
   justify-content: space-between;
   margin: 3rem 0;
 }
 
-.informasi a{
+.informasi a {
   text-decoration: none;
   color: #777;
 }
 
-.informasi .nama{
+.informasi .nama {
   display: grid;
   gap: 1rem;
   width: 352px;
 }
 
-.informasi .about{
+.informasi .about {
   display: flex;
   justify-content: space-between;
   width: 485px;
   text-decoration: none;
 }
 
-.about .kategori{
+.about .kategori {
   display: grid;
   width: 100%;
   gap: 1rem;
 }
 
-.about .perusahaan{
+.about .perusahaan {
   display: grid;
   width: 100%;
   gap: 1rem;
 }
 
-.about .komunitas{
+.about .komunitas {
   display: grid;
   width: 100%;
   height: 50%;
   gap: 5px;
 }
 
-.underline{
+.underline {
   border-bottom: 1px solid #99999160;
 }
 
-.copyright-sosmed{
+.copyright-sosmed {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+}
+
+.kategori button {
+  display: none;
+}
+
+.perusahaan button {
+  display: none;
+}
+
+.komunitas button {
+  display: none;
 }
 
 /* Responsif */
@@ -499,7 +514,145 @@ footer{
     height: 25px;
   }
 
+  .kategori-profil {
+    visibility: hidden;
+  }
+
+  .hamburger {
+    position: static;
+  }
+
+  .hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #000;
+    margin: 6px;
+  }
+
+  .home {
+    padding: 1rem;
+  }
+
+  .home .banner {
+    height: auto;
+  }
+
+  .home .banner img {
+    height: 25rem;
+  }
+
+  .centered h1 {
+    font-size: 33px;
+    padding: 0;
+  }
+
+  .centered p {
+    font-size: 15px;
+    padding: 0;
+  }
+
   .form-group .form-phone .country-code {
     width: 70%;
+  }
+
+  .list-video {
+    padding: 0 1rem;
+  }
+
+  .list-video h1 {
+    font-size: 24px;
+  }
+
+  .list-video .tabs {
+    font-size: 0.7rem;
+  }
+
+  .list-content {
+    grid-template-columns: none;
+  }
+
+  .centered .text-centered {
+    padding: 0 3rem;
+  }
+
+  .email-submit {
+    display: grid;
+    justify-content: center;
+    background-color: unset;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .email-submit input {
+    width: 15rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .email-submit button {
+    width: auto;
+    margin: 0;
+    padding: 0.8rem;
+  }
+
+  footer {
+    padding: 1rem 2rem;
+  }
+
+  .informasi {
+    display: grid;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .informasi .about {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    justify-content: unset;
+  }
+
+  .about a {
+    display: none;
+  }
+
+  .about .kategori {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about .perusahaan {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about .komunitas {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .kategori button {
+    display: inline;
+    border: none;
+    background-color: unset;
+  }
+
+  .perusahaan button {
+    display: inline;
+    border: none;
+    background-color: unset;
+  }
+
+  .komunitas button {
+    display: inline;
+    border: none;
+    background-color: unset;
+  }
+
+  .underline {
+    padding: 1rem 1rem;
+  }
+
+  .copyright-sosmed {
+    flex-direction: column-reverse;
+    align-items: unset;
   }
 }
